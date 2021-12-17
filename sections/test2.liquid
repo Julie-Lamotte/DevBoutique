@@ -1,57 +1,61 @@
-<div class="page-width">
-    <div class="grid">
-    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
-    <div class="section-header text-center">
-    <h1>{{ page.title }}</h1>
-    </div>
-    
-    <div class="rte">
-    {{ page.content }}
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    
-    {% section 'block-sample' %}
+<div class="productListHome velaProducts" style="background-color: {{section.settings.color_bg }};
+                                     {% if section.settings.padding_block !=blank %}padding:{{section.settings.padding_block}}; {% endif %}">
+    <div class="container{% if section.settings.full_with %}-full{% endif %}">
+        {%- if section.settings.title != blank -%}
+            <h3 class="velaHomeTitle velaTitle text-center pd-list">
+                {{ section.settings.title }}
+            </h3>
+        {%- endif -%}
 
-<div id="products">
-    <div class="macbook">
-          <img src="{{ section.settings.sampleid | img_url: '200x200' }}" />
-      test - {{ product.title }}
+        {%- if section.settings.sub-title != blank -%}
+        <p class=" text-center pd-list-stlt">
+            {{ section.settings.sub-title }}
+        </p>
+        {%- endif -%}
+
+        {%- if section.settings.sub-title != blank -%}
+        <img src="{{section.settings.why-img |  img_url: 'master'}}" alt="">
+        {%- endif -%}
     </div>
-   
-  </div>
-   
-  {% schema %}
-  {
-    "name": "image",
-  "max_blocks": 3,
-   
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Product Image",
-        "settings": [
-          {
-          "id": "product",
-          "type": "image_picker",
-          "label": "Product Image"
-          },
-  {
-  "type": "product",
-          "id": "sampleid",
-          "label": "Product"
-  }
+</div>
+
+{% schema %}
+    {
+        "name": "why intro",
+        "class": "why-intro",
+        "settings":[
+            
+            {
+                "type": "checkbox",
+                "id": "full_with",
+                "label": "Enabel Full Width?"
+            },           
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "placeholder": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "sub-title",
+                "label": "Sub Heading",
+                "placeholder": "Sub Heading"
+            },
+            {
+                "type": "image_picker",
+                "id": "why-img",
+                "label": "why images"
+
+            }
+             
+        ],
+        "presets": [
+            {
+                "name": "Why intro ",
+                "category": "CTA"
+                 
+            }
         ]
-      }
-    ]
-  }
-   
-  {% endschema %}
-   
-  {% stylesheet %}
-  {% endstylesheet %}
-   
-  {% javascript %}
-  {% endjavascript %}
+    }
+{% endschema %}
