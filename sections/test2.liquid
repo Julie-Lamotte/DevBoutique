@@ -1,0 +1,49 @@
+<footer class="footer">
+  
+    {% for block in section.blocks %}  
+      {% case block.type %}
+    
+        {% when 'link' %}  
+          <div class="link" {{ block.shopify_attributes }}>   
+            {{ block.settings.linktext | link_to: block.settings.linkurl }}
+          </div> 
+    
+        {% when 'custom-text' %}
+          <div class="text" {{ block.shopify_attributes }}>{{ block.settings.custom-text-field }}</div>
+    
+      {% endcase %} 
+    {% endfor %}
+  
+</footer>  
+
+{% schema %}
+{
+  "name": "Main product section",
+  "blocks": [
+	  {
+       "type": "@app"
+    },
+	  {
+        "type": "title",
+        "name": "Title",
+        "limit": 1
+    },
+	  {
+	       "type": "price",
+       	 "name": "Price",
+         "limit": 1
+	  },
+    {
+         "type": "vendor",
+         "name": "Vendor",
+         "limit": 1
+    },
+	  {
+	       "type": "description",
+         "name": "Description",
+         "limit": 1
+	  }
+]
+}
+
+{% endschema %}
