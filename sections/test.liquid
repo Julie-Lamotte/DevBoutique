@@ -1,7 +1,7 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
-  <img src="{{section.settings.image}}" alt="">
+  <img src="{{ section.settings.image | img_url: '600x' }}" alt="">
 </div>
 
 {% schema %}
