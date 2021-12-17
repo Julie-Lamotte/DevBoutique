@@ -188,9 +188,19 @@
     },
     "1639748973ed2f3ca7": {
       "type": "test",
+      "blocks": {
+        "ab436616-96d5-4c63-a9ec-92b9e063f34a": {
+          "type": "image_picker",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "ab436616-96d5-4c63-a9ec-92b9e063f34a"
+      ],
       "settings": {
         "custom_text_title": "Aspirateur à granulés",
-        "custom_text_body": "<p>Entrer le texte<\/p>"
+        "custom_text_body": "<p>Lorem ipsum dolor sit amet, consectetur adipisci lit, de do eiusmo temi incididunt ut labore et <br\/>dolore magna aliqua. Lorem ipsum dolor sitame, di consectetur sedi adipiscin elit. Lorem ipsum <br\/>dolor sit amet, sectetur elit, sed do eiusmod tempor incididunt utlabo et dolore magnal. Loremp <br\/>dolor sit amet, sectetur elit.<\/p>"
       }
     }
   },
