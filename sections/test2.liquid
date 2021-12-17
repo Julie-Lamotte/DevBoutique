@@ -1,49 +1,57 @@
-<div class="custom-text-section">
-    <h2> {{ section.settings.custom_text_title }} </h2>
-    <div>{{ section.settings.custom_text_body }}</div>
+<div class="page-width">
+    <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+    <div class="section-header text-center">
+    <h1>{{ page.title }}</h1>
+    </div>
+    
+    <div class="rte">
+    {{ page.content }}
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    {% section 'block-sample' %}
+
+<div id="products">
+    <div class="macbook">
+          <img src="{{ section.settings.sampleid | img_url: '200x200' }}" />
+      test - {{ product.title }}
+    </div>
+   
   </div>
-  
+   
   {% schema %}
-    {
-      "name": "Test",
-      "settings": [
-        {
-          "id": "custom_text_title",
-          "type": "text",
-          "label": "Titre",
-          "default": "Entrer le titre"
-        },
-        {
-          "id": "custom_text_body",
-          "type": "text",
-          "label": "Texte",
-          "default": "<p>Entrer le texte</p>"
-        }
-      ],
-      "presets": [
+  {
+    "name": "image",
+  "max_blocks": 3,
+   
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Product Image",
+        "settings": [
           {
-            "name": "Test",
-            "category": "Custom"
-          }
-        ],
-      "blocks": [
-        {
-          "name": "Test",
-          "type": "text",
-          "settings": [
-            {
-              "id": "custom_text_body",
-              "type": "text",
-              "label": "Paragraphe",
-              "default": "<p>Entrer le texte</p>"
-            }  
-          ]     
-        }
-      ], "presets": [
-          {
-            "name": "Test",
-            "category": "Custom"
-          }
+          "id": "product",
+          "type": "image_picker",
+          "label": "Product Image"
+          },
+  {
+  "type": "product",
+          "id": "sampleid",
+          "label": "Product"
+  }
         ]
-    }
+      }
+    ]
+  }
+   
   {% endschema %}
+   
+  {% stylesheet %}
+  {% endstylesheet %}
+   
+  {% javascript %}
+  {% endjavascript %}
