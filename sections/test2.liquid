@@ -1,0 +1,61 @@
+<div class="productListHome velaProducts";
+                                     {% if section.settings.padding_block !=blank %}{% endif %}">
+    <div class="container{% if section.settings.full_with %}-full{% endif %}">
+        {%- if section.settings.title != blank -%}
+            <h3 class="velaHomeTitle velaTitle text-center pd-list">
+                {{ section.settings.title }}
+            </h3>
+        {%- endif -%}
+
+        {%- if section.settings.sub-title != blank -%}
+        <p class=" text-center pd-list-stlt">
+            {{ section.settings.sub-title }}
+        </p>
+        {%- endif -%}
+
+        {%- if section.settings.sub-title != blank -%}
+        <img src="{{section.settings.why-img |  img_url: 'master'}}" alt="">
+        {%- endif -%}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "why intro",
+        "class": "why-intro",
+        "settings":[
+            
+            {
+                "type": "checkbox",
+                "id": "full_with",
+                "label": "Enabel Full Width?"
+            },           
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Heading",
+                "placeholder": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "sub-title",
+                "label": "Sub Heading",
+                "placeholder": "Sub Heading"
+            },
+            {
+                "type": "image_picker",
+                "id": "why-img",
+                "label": "why images"
+
+            }
+             
+        ],
+        "presets": [
+            {
+                "name": "Why intro ",
+                "category": "CTA"
+                 
+            }
+        ]
+    }
+{% endschema %}
