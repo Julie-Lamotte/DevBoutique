@@ -1,7 +1,7 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
-  <img src="{{ section.settings.image | img_url: '600x' }}" alt="">
+  <img src="{{ section.settings.image | image_url: width: 600 }}" alt="">
 </div>
 
 {% schema %}
@@ -36,7 +36,6 @@
             "type": "image_picker",
             "id": "image",
             "label": "Insérer une image"
-
           }
         ]  
       }
