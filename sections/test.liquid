@@ -1,7 +1,17 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
-  {{ block.settings.image | image_url: width: 2048 | image_tag }}
+  
+
+{% for block in section.blocks %}
+  {% case block.type %}
+    {% when 'slide' %}
+      <div class="slide" {{ block.shopify_attributes }}>
+        {{ block.settings.image | image_url: width: 2048 | image_tag }}
+      </div>
+    ...
+  {% endcase %}
+{% endfor %}
 </div>
 
 {% schema %}
