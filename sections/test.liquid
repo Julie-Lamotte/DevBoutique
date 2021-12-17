@@ -1,24 +1,6 @@
 <div class="custom-text-section">
-  <h2>{{ product.title }}</h2>
-
-  {{ product.price }}
-
-  {%- if product.vendor -%}
-    <p>{{ product.vendor }}</p>
-    {% for block in section.blocks %}  
-    {% case block.type %}
-  
-      {%- when '@app' -%}
-        {% render block %}
-  
-      {% when 'title' %} 	
-        <h2>{{ product.title }}</h2>
-  
-      {% when 'price' %}
-        {%- render 'price' -%}
-  {%- endif -%}
-
-  <p>{{ product.description }}</p>
+  <h2> {{ section.settings.custom_text_title }} </h2>
+  <div>{{ section.settings.custom_text_body }}</div>
 </div>
 
 {% schema %}
@@ -44,30 +26,5 @@
         "category": "Custom"
       }
     ],
-    "blocks": [
-	  {
-       "type": "@app"
-    },
-	  {
-        "type": "title",
-        "name": "Title",
-        "limit": 1
-    },
-	  {
-	       "type": "price",
-       	 "name": "Price",
-         "limit": 1
-	  },
-    {
-         "type": "vendor",
-         "name": "Vendor",
-         "limit": 1
-    },
-	  {
-	       "type": "description",
-         "name": "Description",
-         "limit": 1
-	  }
-]
   }
 {% endschema %}
