@@ -1,55 +1,30 @@
-<div class="header">
+<div class="footer">
   <h2>{{ section.settings.test_title }}</h2>
-  <p>{{ section.settings.test_title }}</p>
+  <p>{{ section.settings.test_text }}</p>
 </div>
 
 {% schema %}
-  {
-    "name": "test",
-    "class": "index-section section-test",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Textes génériques"
-      },
-      {
-        "type": "header",
-        "id": "test_title",
-        "label": "Titre de la FAQ",
-        "default": "test"
-      }
-      {
-        "type": "richtext",
-        "id": "test_text",
-        "label": "Texte d'introduction test",
-        "default": "<p>N'hésitez pas à consulter la page.</p>"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "block test",
-        "type": "text",
-        "settings": [
-        {
-          "type": "text",
-          "id": "block_title",
-          "label": "Questions",
-          "default": "Question numéro 1"
-        },
-        {
-          "type": "richtext",
-          "id": "block_text",
-          "label": "Réponse",
-          "default": "<p>Réponse numéro 1.</p>"
-        }
-      ]
-    }
-  ],
-  "presets": [
     {
-      "name": "test",
-      "category": "Renseignements"
+        "name": "Footer Image",
+        "class": "image",
+        "settings":     [
+            {
+                "id": "footer-image-heading",
+                "type": "text",
+                "label": "footer-image-heading",
+                "default": "Enter heading text here"
+            },
+            {
+                "id": "footer-image",
+                "type": "image_picker",
+                "label": "footer-image"
+
+            },
+            {
+                "id": "footer-image-url",
+                "type": "url",
+                "label": "Enter url here"
+            }
+        ]
     }
-  ]
-}
 {% endschema %}
