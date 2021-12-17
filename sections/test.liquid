@@ -4,52 +4,27 @@
 </div>
 
 {% schema %}
-  {
-    "name": "FAQ",
-    "class": "index-section section-faq",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Textes génériques"
-      },
-      {
-        "type": "text",
-        "id": "faq_title",
-        "label": "Titre de la FAQ",
-        "default": "FAQ"
-      }
-      {
-        "type": "richtext",
-        "id": "faq_text",
-        "label": "Texte d'introduction de la FAQ",
-        "default": "<p>N'hésitez pas à consulter la page.</p>"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "block FAQ",
-        "type": "text",
-        "settings": [
-        {
-          "type": "text",
-          "id": "block_title",
-          "label": "Question",
-          "default": "Question numéro 1"
-        },
-        {
-          "type": "richtext",
-          "id": "block_text",
-          "label": "Réponse",
-          "default": "<p>Réponse numéro 1.</p>"
-        }
-      ]
-    }
-  ],
-  "presets": [
     {
-      "name": "FAQ",
-      "category": "Renseignements"
+        "name": "Footer Image",
+        "class": "image",
+        "settings":     [
+            {
+              "type": "header",
+              "content": "Textes génériques"
+            },
+            {
+              "type": "text",
+              "id": "block_title",
+              "label": "Question",
+              "default": "Question numéro 1"
+
+            },
+            {
+              "type": "richtext",
+              "id": "block_text",
+              "label": "Réponse",
+              "default": "<p>Réponse numéro 1.</p>"
+            }
+        ]
     }
-  ]
-}
 {% endschema %}
