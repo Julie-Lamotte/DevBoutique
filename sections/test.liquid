@@ -27,12 +27,29 @@
       }
     ],
     "blocks": [
+	  {
+       "type": "@app"
+    },
+	  {
+        "type": "title",
+        "name": "Title",
+        "limit": 1
+    },
+	  {
+	       "type": "price",
+       	 "name": "Price",
+         "limit": 1
+	  },
     {
-      "id": "custom_text_title",
-      "type": "text",
-      "label": "Titre",
-      "default": "Entrer le titre"
-    }
-  ]
+         "type": "vendor",
+         "name": "Vendor",
+         "limit": 1
+    },
+	  {
+	       "type": "description",
+         "name": "Description",
+         "limit": 1
+	  }
+]
   }
 {% endschema %}
