@@ -185,6 +185,13 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "1639748973ed2f3ca7": {
+      "type": "test",
+      "settings": {
+        "custom_text_title": "Aspirateur à granulés",
+        "custom_text_body": "<p>Entrer le texte<\/p>"
+      }
     }
   },
   "order": [
@@ -193,6 +200,7 @@
     "featured_products",
     "collage",
     "video",
-    "multi_column"
+    "multi_column",
+    "1639748973ed2f3ca7"
   ]
 }
