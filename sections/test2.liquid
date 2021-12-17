@@ -16,34 +16,39 @@
   
 </footer>  
 
+
 {% schema %}
 {
-  "name": "Main product section",
+  "name": "Footer",
+  "max_blocks": 8,
   "blocks": [
-	  {
-       "type": "@app"
-    },
-	  {
-        "type": "title",
-        "name": "Title",
-        "limit": 1
-    },
-	  {
-	       "type": "price",
-       	 "name": "Price",
-         "limit": 1
-	  },
     {
-         "type": "vendor",
-         "name": "Vendor",
-         "limit": 1
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        {
+          "id": "linkurl",
+          "type": "url",
+          "label": "URL link"
+        },
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Link text"
+        }
+      ]
     },
-	  {
-	       "type": "description",
-         "name": "Description",
-         "limit": 1
-	  }
-]
+    {
+      "type": "custom-text",
+      "name": "Custom Text",
+      "settings": [
+        {
+          "id": "custom-text-field",
+          "type": "textarea",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
 }
-
 {% endschema %}
