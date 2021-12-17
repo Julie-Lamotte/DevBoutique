@@ -1,8 +1,8 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
+
   
-  <img src="{{ section.settings.image | img_url: '200x200' }}" />
 </div>
 
 {% schema %}
@@ -23,23 +23,14 @@
         }
       ],
       "blocks": [
-      {
-        "name": "Texte",
-        "type": "text",
-        "settings": [
-          {
-            "id": "custom_text_body",
-            "type": "richtext",
-            "label": "Paragraphe",
-            "default": "<p>Entrer le texte</p>"
-          },
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Insérer une image"
-          }     
-        ]
-      }
-    ]
+        {
+        "id": "custom_text_body",
+        "type": "richtext",
+        "label": "Texte",
+        "default": "<p>Entrer le texte</p>"
+        }
+      ]
+    }
+  ]
   }
 {% endschema %}
