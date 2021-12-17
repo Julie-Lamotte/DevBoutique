@@ -2,9 +2,7 @@
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
 
-  {%- if section.settings.sub-title != blank -%}
-  <img src="{{section.settings.why-img |  img_url: 'master'}}" alt="">
-  {%- endif -%}
+  
 </div>
 
 {% schema %}
@@ -37,8 +35,8 @@
           },
           {
             "type": "image_picker",
-            "id": "why-img",
-            "label": "why images"
+            "id": "image",
+            "label": "Insérer une image"
           }     
         ]
       }
