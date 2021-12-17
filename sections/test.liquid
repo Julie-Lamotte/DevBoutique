@@ -2,7 +2,7 @@
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
 
-  
+  <img src="{{ section.settings.sampleid | img_url: '200x200' }}" />
 </div>
 
 {% schema %}
@@ -30,7 +30,7 @@
           {
             "id": "custom_text_body",
             "type": "richtext",
-            "label": "Paragraphe",
+            "label": "Texte",
             "default": "<p>Entrer le texte</p>"
           },
           {
