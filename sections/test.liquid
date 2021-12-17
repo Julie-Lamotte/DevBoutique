@@ -9,39 +9,39 @@
 
 {% schema %}
   {
-    "name": "Texte",
-    "settings": [
-      {
-        "id": "custom_text_title",
-        "type": "text",
-        "label": "Titre",
-        "default": "Entrer le titre"
-      }
-    ],
-    "presets": [
+      "name": "Texte",
+      "settings": [
+        {
+          "id": "custom_text_title",
+          "type": "text",
+          "label": "Titre",
+          "default": "Entrer le titre"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Texte",
+          "category": "Custom"
+        }
+      ],
+      "blocks": [
       {
         "name": "Texte",
-        "category": "Custom"
+        "type": "text",
+        "settings": [
+          {
+            "id": "custom_text_body",
+            "type": "richtext",
+            "label": "Texte",
+            "default": "<p>Entrer le texte</p>"
+          },
+          {
+            "type": "image_picker",
+            "id": "why-img",
+            "label": "why images"
+          }     
+        ]
       }
-    ],
-    "blocks": [
-    {
-      "name": "Texte",
-      "type": "text",
-      "settings": [
-      {
-        "id": "custom_text_body",
-        "type": "richtext",
-        "label": "Texte",
-        "default": "<p>Entrer le texte</p>"
-      },
-      {
-        "type": "image_picker",
-        "id": "why-img",
-        "label": "why images"
-    }     
-      ]
-    }
-  ]
+    ]
   }
 {% endschema %}
