@@ -1,30 +1,55 @@
-<div class="footer">
-  <h2>{{ section.settings.test_title }}</h2>
-  <p>{{ section.settings.test_text }}</p>
+<div class="header">
+  <h2>{{ section.settings.faq_title }}</h2>
+  <p>{{ section.settings.faq_text }}</p>
 </div>
 
 {% schema %}
-    {
-        "name": "Footer Image",
-        "class": "image",
-        "settings":     [
-            {
-                "id": "footer-image-heading",
-                "type": "text",
-                "label": "footer-image-heading",
-                "default": "Enter heading text here"
-            },
-            {
-                "id": "footer-image",
-                "type": "image_picker",
-                "label": "footer-image"
-
-            },
-            {
-                "id": "footer-image-url",
-                "type": "url",
-                "label": "Enter url here"
-            }
-        ]
+  {
+    "name": "FAQ",
+    "class": "index-section section-faq",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Textes génériques"
+      },
+      {
+        "type": "text",
+        "id": "faq_title",
+        "label": "Titre de la FAQ",
+        "default": "FAQ"
+      }
+      {
+        "type": "richtext",
+        "id": "faq_text",
+        "label": "Texte d'introduction de la FAQ",
+        "default": "<p>N'hésitez pas à consulter la page.</p>"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "block FAQ",
+        "type": "text",
+        "settings": [
+        {
+          "type": "text",
+          "id": "block_title",
+          "label": "Question",
+          "default": "Question numéro 1"
+        },
+        {
+          "type": "richtext",
+          "id": "block_text",
+          "label": "Réponse",
+          "default": "<p>Réponse numéro 1.</p>"
+        }
+      ]
     }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "category": "Renseignements"
+    }
+  ]
+}
 {% endschema %}
