@@ -1,17 +1,6 @@
-<div class="productListHome velaProducts" style="background-color: {{section.settings.color_bg }};
-                                     {% if section.settings.padding_block !=blank %}padding:{{section.settings.padding_block}}; {% endif %}">
+<div class="productListHome velaProducts";
+    
     <div class="container{% if section.settings.full_with %}-full{% endif %}">
-        {%- if section.settings.title != blank -%}
-            <h3 class="velaHomeTitle velaTitle text-center pd-list">
-                {{ section.settings.title }}
-            </h3>
-        {%- endif -%}
-
-        {%- if section.settings.sub-title != blank -%}
-        <p class=" text-center pd-list-stlt">
-            {{ section.settings.sub-title }}
-        </p>
-        {%- endif -%}
 
         {%- if section.settings.sub-title != blank -%}
         <img src="{{section.settings.why-img}}" alt="">
@@ -24,12 +13,7 @@
         "name": "why intro",
         "class": "why-intro",
         "settings":[
-            
-            {
-                "type": "checkbox",
-                "id": "full_with",
-                "label": "Enabel Full Width?"
-            },           
+                      
             {
                 "type": "text",
                 "id": "title",
