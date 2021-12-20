@@ -1,0 +1,43 @@
+<div class="custom-text-section">
+    <h2> {{ section.settings.custom_text_title }} </h2>
+    <div>{{ section.settings.custom_text_body }}</div>
+   
+    {{ image | image_url: width: 500 }}
+  </div>
+  
+  {% schema %}
+    {
+      "name": "Texte",
+      "settings": [
+        {
+          "id": "custom_text_title",
+          "type": "text",
+          "label": "Titre",
+          "default": "Entrer le titre"
+        },
+        {
+          "id": "custom_text_body",
+          "type": "richtext",
+          "label": "Texte",
+          "default": "<p>Entrer le texte</p>"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Texte",
+          "category": "Custom"
+        }
+      ],
+      "blocks": [
+        {
+          "name": "image",
+          "type": "image_picker",
+          "settings": [
+            {
+             
+            }
+          ]  
+        }
+      ]
+    }
+  {% endschema %}
