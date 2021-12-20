@@ -1,10 +1,7 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
-</div>
-
-<div class="image" {{ block.shopify_attributes }}>
-  {{ block.settings.image | image_url: width: 2048 | image_tag }}
+ 
 </div>
 
 {% schema %}
@@ -31,25 +28,17 @@
       }
     ],
     "blocks": [
-     {
-       "name": "Image",
-       "type": "img",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "Image"
-         }
-       ]
-     }
-   ],
-   "blocks": [
-   {
-     "type": "slide"
-   },
-   {
-     "type": "slide"
-   }
- ]
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
   }
 {% endschema %}
