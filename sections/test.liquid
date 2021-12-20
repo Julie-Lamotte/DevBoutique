@@ -1,7 +1,7 @@
 <div class="custom-text-section">
   <h2> {{ section.settings.custom_text_title }} </h2>
   <div>{{ section.settings.custom_text_body }}</div>
- 
+  <img src="{{ section.settings.image | img_url: '600x600' }}" alt="">
 </div>
 
 {% schema %}
@@ -28,17 +28,17 @@
       }
     ],
     "blocks": [
-    {
-      "name": "Slide",
-      "type": "slide",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        }
-      ]
-    }
-  ]
+      {
+        "name": "image",
+        "type": "image_picker",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Insérer une image"
+          }
+        ]  
+      }
+    ]
   }
 {% endschema %}
