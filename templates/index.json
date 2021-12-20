@@ -189,15 +189,15 @@
     "1639748973ed2f3ca7": {
       "type": "test",
       "blocks": {
-        "ab436616-96d5-4c63-a9ec-92b9e063f34a": {
-          "type": "image_picker",
+        "723636d4-41d0-45a5-9771-54cbfcd5ed3b": {
+          "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
           }
         }
       },
       "block_order": [
-        "ab436616-96d5-4c63-a9ec-92b9e063f34a"
+        "723636d4-41d0-45a5-9771-54cbfcd5ed3b"
       ],
       "settings": {
         "custom_text_title": "Aspirateur à granulés",
