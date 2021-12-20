@@ -1,45 +1,47 @@
-<div class="custom-text-section">
-    <h2> {{ section.settings.custom_text_title }} </h2>
-    <div>{{ section.settings.custom_text_body }}</div>
-  
-     {{ block.settings.image | image_url: width: 2048 | image_tag }}
-  </div>
-  
-  {% schema %}
+<div class="image" {{ block.shopify_attributes }}>
+    {{ block.settings.image | image_url: width: 2048 | image_tag }}
+</div>
+
+{% schema %}
+{
+  "name": "Slideshow",
+  "tag": "section",
+  "class": "slideshow",
+  "settings": [
     {
-      "name": "Texte",
-      "settings": [
-        {
-          "id": "custom_text_title",
-          "type": "text",
-          "label": "Titre",
-          "default": "Entrer le titre"
-        },
-        {
-          "id": "custom_text_body",
-          "type": "richtext",
-          "label": "Texte",
-          "default": "<p>Entrer le texte</p>"
-        }
-      ],
-      "presets": [
-        {
-          "name": "Texte",
-          "category": "Custom"
-        }
-      ],
-      "blocks": [
-       {
-         "name": "Image",
-         "type": "img",
-         "settings": [
-           {
-             "type": "image_picker",
-             "id": "image",
-             "label": "Image"
-           }
-         ]
-       }
-     ],
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
     }
-  {% endschema %}
+  ],
+  "blocks": [
+     {
+       "name": "Slide",
+       "type": "img",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     }
+   ],
+  "presets": [
+     {
+       "name": "Slideshow",
+       "settings": {
+          "title": "Slideshow"
+        },
+       "blocks": [
+         {
+           "type": "slide"
+         },
+         {
+           "type": "slide"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
