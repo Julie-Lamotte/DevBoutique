@@ -7,6 +7,7 @@
     <h2> {{ block.settings.custom_text_title }} </h2>
     <div>{{ block.settings.custom_text_body }}</div>
     <img src="{{ block.settings.img | img_url: '600x' }}" loading="lazy">    
+    <a href= {{ block.settings.button_link }} </a>
   {% endif %}
 {% endfor %}
   
@@ -42,7 +43,12 @@
                         "type": "image_picker",
                         "id": "img",
                         "label": "Image"
-                    }
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_link",
+                        "label": "Button link"
+                    }  
                  ]
             }
   
