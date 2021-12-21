@@ -186,57 +186,41 @@
         "swipe_on_mobile": false
       }
     },
-    "1639748973ed2f3ca7": {
-      "type": "test",
+    "1640081480af689380": {
+      "type": "section-block-test",
       "blocks": {
-        "723636d4-41d0-45a5-9771-54cbfcd5ed3b": {
+        "ff1bb758-7caa-4ed9-9906-52759e08f927": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
+            "custom_text_title": "titre",
+            "custom_text_body": "<p>texte<\/p>",
+            "img": "shopify:\/\/shop_images\/reunion.jpg"
+          }
+        },
+        "34ad0439-8f6e-4d69-b721-cf09add70a21": {
+          "type": "image",
+          "settings": {
+            "custom_text_title": "test",
+            "custom_text_body": "<p>paragraphe<\/p>",
+            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
+          }
+        },
+        "dfe023ff-dd81-4cc0-b7ae-4d64f44c4c05": {
+          "type": "image",
+          "settings": {
+            "custom_text_title": "Entrer le titre",
+            "custom_text_body": "<p>Entrer le texte<\/p>",
+            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
           }
         }
       },
       "block_order": [
-        "723636d4-41d0-45a5-9771-54cbfcd5ed3b"
+        "ff1bb758-7caa-4ed9-9906-52759e08f927",
+        "34ad0439-8f6e-4d69-b721-cf09add70a21",
+        "dfe023ff-dd81-4cc0-b7ae-4d64f44c4c05"
       ],
       "settings": {
-        "custom_text_title": "Aspirateur à granulés",
-        "custom_text_body": "<p>Lorem ipsum dolor sit amet, consectetur adipisci lit, de do eiusmo temi incididunt ut labore et <br\/>dolore magna aliqua. Lorem ipsum dolor sitame, di consectetur sedi adipiscin elit. Lorem ipsum <br\/>dolor sit amet, sectetur elit, sed do eiusmod tempor incididunt utlabo et dolore magnal. Loremp <br\/>dolor sit amet, sectetur elit.<\/p>"
-      }
-    },
-    "16400788249be374fd": {
-      "type": "test2",
-      "blocks": {
-        "293cdf31-d21b-4b93-8e0e-0cce31421117": {
-          "type": "image",
-          "settings": {
-            "custom_text_title": "Entrer le titre",
-            "custom_text_body": "<p>Entrer le texte<\/p>"
-          }
-        },
-        "edc278b8-9fff-40a6-8db6-a810ba0fb48b": {
-          "type": "image",
-          "settings": {
-            "custom_text_title": "Entrer le titre",
-            "custom_text_body": "<p>Entrer le texte<\/p>"
-          }
-        },
-        "0ee21e8a-ffce-4911-95a3-858698150de9": {
-          "type": "image",
-          "settings": {
-            "custom_text_title": "Entrer le titre",
-            "custom_text_body": "<p>Entrer le texte<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "293cdf31-d21b-4b93-8e0e-0cce31421117",
-        "edc278b8-9fff-40a6-8db6-a810ba0fb48b",
-        "0ee21e8a-ffce-4911-95a3-858698150de9"
-      ],
-      "settings": {
-        "custom_text_title": "Entrer le titre",
-        "custom_text_body": "<p>Entrer le texte<\/p>"
+        "custom_text_title": "Entrer le titre"
       }
     }
   },
@@ -247,7 +231,6 @@
     "collage",
     "video",
     "multi_column",
-    "1639748973ed2f3ca7",
-    "16400788249be374fd"
+    "1640081480af689380"
   ]
 }
