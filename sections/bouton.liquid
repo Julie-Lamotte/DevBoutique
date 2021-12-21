@@ -1,0 +1,11 @@
+{% for link in linklists.main.links %}
+  <a href="{{ link.url }}"
+    {% if link.current %}aria-current="page" class="highlight"{% endif %}
+  >
+   {{ link.title }}
+  </a>
+{% endfor %}
+
+<a href="/collections/summer">Summer collection</a>
+<a href="/collections/winter" aria-current="page" class="highlight">Winter collection</a>
+<a href="/collections/all">All products</a>
