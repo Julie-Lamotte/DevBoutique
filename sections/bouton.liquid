@@ -6,8 +6,8 @@
   {% if block.settings.img != nil %}
     <h2> {{ block.settings.custom_text_title }} </h2>
     <div>{{ block.settings.custom_text_body }}</div>
+    <a href= "{{ block.settings.button_link }}" </a>
     <img src="{{ block.settings.img | img_url: '600x' }}" loading="lazy">    
-    <a href= {{ block.settings.button_link }} </a>
   {% endif %}
 {% endfor %}
   
