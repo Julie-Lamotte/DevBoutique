@@ -1,0 +1,85 @@
+<div class="custom-text-section">
+    <h2> {{ section.settings.custom_text_title }} </h2>
+</div>
+  
+{% for block in section.blocks %}
+  {% if block.settings.img != nil %}
+    <h2> {{ block.settings.custom_text_title }} </h2>
+    <div>{{ block.settings.custom_text_body }}</div>
+    <a href="{{ block.settings.link }}" class="bouton">{{ block.settings.linktext }}</a>
+    <img src="{{ block.settings.img | img_url: '600x' }}" loading="lazy">   
+    <video controls>
+
+        <source src="{{ block.settings.video }}" type="video/mp4">{{ block.settings.linktext }}</a>
+    
+    </video>
+  {% endif %}
+{% endfor %}
+  
+  {% schema %}
+    {
+        "name": "my titre et image",
+        "settings": [
+            {
+                "id": "custom_text_title",
+                "type": "text",
+                "label": "Titre",
+                "default": "Entrer le titre"
+            }
+        ],
+        "blocks": [ 
+            {
+                "name": "text img",
+                "type": "image",
+                "settings": [
+                    {
+                        "id": "custom_text_title",
+                        "type": "text",
+                        "label": "Titre",
+                        "default": "Entrer le titre"
+                    },
+                    {
+                        "id": "custom_text_body",
+                        "type": "richtext",
+                        "label": "Texte",
+                        "default": "<p>Entrer le texte</p>"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "img",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "url",
+                        "id": "link",
+                        "label": "Bouton"
+                    },
+                    {
+                        "id": "linktext",
+                        "type": "text",
+                        "label": "Bouton text",
+                        "default": "Cliquez-ici"
+                    },  
+                    {
+                        "type": "html",
+                        "id": "video",
+                        "label": "Video"
+                    }
+                    {
+                        "id": "linktext",
+                        "type": "text",
+                        "label": "Bouton text",
+                        "default": "Cliquez-ici"
+                    }
+                 ]
+            }
+  
+        ],
+        "presets": [
+            {
+                "name": "my titre et image",
+                "category": "Custom"
+            }
+        ]
+    }
+  {% endschema %}
