@@ -203,6 +203,41 @@
         "custom_text_title": "Aspirateur à granulés",
         "custom_text_body": "<p>Lorem ipsum dolor sit amet, consectetur adipisci lit, de do eiusmo temi incididunt ut labore et <br\/>dolore magna aliqua. Lorem ipsum dolor sitame, di consectetur sedi adipiscin elit. Lorem ipsum <br\/>dolor sit amet, sectetur elit, sed do eiusmod tempor incididunt utlabo et dolore magnal. Loremp <br\/>dolor sit amet, sectetur elit.<\/p>"
       }
+    },
+    "16400788249be374fd": {
+      "type": "test2",
+      "blocks": {
+        "293cdf31-d21b-4b93-8e0e-0cce31421117": {
+          "type": "image",
+          "settings": {
+            "custom_text_title": "Entrer le titre",
+            "custom_text_body": "<p>Entrer le texte<\/p>"
+          }
+        },
+        "edc278b8-9fff-40a6-8db6-a810ba0fb48b": {
+          "type": "image",
+          "settings": {
+            "custom_text_title": "Entrer le titre",
+            "custom_text_body": "<p>Entrer le texte<\/p>"
+          }
+        },
+        "0ee21e8a-ffce-4911-95a3-858698150de9": {
+          "type": "image",
+          "settings": {
+            "custom_text_title": "Entrer le titre",
+            "custom_text_body": "<p>Entrer le texte<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "293cdf31-d21b-4b93-8e0e-0cce31421117",
+        "edc278b8-9fff-40a6-8db6-a810ba0fb48b",
+        "0ee21e8a-ffce-4911-95a3-858698150de9"
+      ],
+      "settings": {
+        "custom_text_title": "Entrer le titre",
+        "custom_text_body": "<p>Entrer le texte<\/p>"
+      }
     }
   },
   "order": [
@@ -212,6 +247,7 @@
     "collage",
     "video",
     "multi_column",
-    "1639748973ed2f3ca7"
+    "1639748973ed2f3ca7",
+    "16400788249be374fd"
   ]
 }
