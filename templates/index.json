@@ -194,7 +194,9 @@
           "settings": {
             "custom_text_title": "titre",
             "custom_text_body": "<p>texte<\/p>",
-            "img": "shopify:\/\/shop_images\/reunion.jpg"
+            "img": "shopify:\/\/shop_images\/reunion.jpg",
+            "link": "shopify:\/\/pages\/a-propos",
+            "linktext": "Cliquez-ici"
           }
         },
         "34ad0439-8f6e-4d69-b721-cf09add70a21": {
@@ -202,7 +204,9 @@
           "settings": {
             "custom_text_title": "test",
             "custom_text_body": "<p>paragraphe<\/p>",
-            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
+            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg",
+            "link": "",
+            "linktext": "Cliquez-ici"
           }
         },
         "dfe023ff-dd81-4cc0-b7ae-4d64f44c4c05": {
@@ -210,7 +214,9 @@
           "settings": {
             "custom_text_title": "Entrer le titre",
             "custom_text_body": "<p>Entrer le texte<\/p>",
-            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg"
+            "img": "shopify:\/\/shop_images\/reunion_88c50993-2bfd-4d7b-8ba3-9dd421ce2f74.jpg",
+            "link": "",
+            "linktext": "Cliquez-ici"
           }
         }
       },
