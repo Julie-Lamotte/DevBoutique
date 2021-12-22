@@ -1,3 +1,5 @@
+{{ 'section-block-style.css' | asset_url | stylesheet_tag }}
+
 <div class="custom-text-section">
     <h2> {{ section.settings.custom_text_title }} </h2>
 </div>
@@ -54,7 +56,13 @@
                         "type": "text",
                         "label": "Bouton text",
                         "default": "Cliquez-ici"
-                    }  
+                    },  
+                    {
+                        "type": "color",
+                        "id": "body_text",
+                        "label": "Body text",
+                        "default": "#000000"
+                    }                   
                  ]
             }
   
