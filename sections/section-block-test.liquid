@@ -1,4 +1,5 @@
 {{ 'section-block-style.css' | asset_url | stylesheet_tag }}
+{{ 'section-block-test.js' | global_asset_url | script_tag }}
 
 <div class="custom-text-section">
     <h2> {{ section.settings.custom_text_title }} </h2>
@@ -62,7 +63,7 @@
                         "id": "body_text",
                         "label": "Body text",
                         "default": "#000000"
-                    }                   
+                    }             
                  ]
             }
   
