@@ -1,19 +1,26 @@
+<head>
+{{ 'section-block-style.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+
 <div class="custom-text-section">
-    <h2> {{ section.settings.custom_text_title }} </h2>
+    <h1> {{ section.settings.custom_text_title }} </h1>
 </div>
-  
-{% for block in section.blocks %}
-  {% if block.settings.img != nil %}
-    <h2> {{ block.settings.custom_text_title }} </h2>
-    <div>{{ block.settings.custom_text_body }}</div>
-    <a href="{{ block.settings.link }}" class="bouton">{{ block.settings.linktext }}</a>
-    <img src="{{ block.settings.img | img_url: '600x' }}" loading="lazy">    
-  {% endif %}
-{% endfor %}
-  
+
+<div class="block">
+    {% for block in section.blocks %}
+    {% if block.settings.custom_text_title != nil %}
+        <h1 class="chiffre">{{ block.settings.custom_text_title }}</h1>
+        <div class="texte">{{ block.settings.custom_text_body }}</div>    
+    {% endif %}
+    {% endfor %}
+</div>
+
   {% schema %}
     {
-        "name": "my titre et image",
+        "name": "Def",
         "settings": [
             {
                 "id": "custom_text_title",
@@ -25,7 +32,7 @@
         "blocks": [ 
             {
                 "name": "text img",
-                "type": "image",
+                "type": "text",
                 "settings": [
                     {
                         "id": "custom_text_title",
@@ -38,30 +45,14 @@
                         "type": "richtext",
                         "label": "Texte",
                         "default": "<p>Entrer le texte</p>"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "img",
-                        "label": "Image"
-                    },
-                    {
-                        "type": "url",
-                        "id": "link",
-                        "label": "Bouton"
-                    },
-                    {
-                        "id": "linktext",
-                        "type": "text",
-                        "label": "Bouton text",
-                        "default": "Cliquez-ici"
-                    }  
+                    }
                  ]
             }
   
         ],
         "presets": [
             {
-                "name": "my titre et image",
+                "name": "Def",
                 "category": "Custom"
             }
         ]

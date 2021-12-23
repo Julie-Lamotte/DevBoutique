@@ -1,0 +1,23 @@
+$color: #a9d1a4;
+$font-family : 'Pushster', cursive;
+
+.custom-text-section h1 {
+    text-align: center;
+    font-family: $font-family;
+}
+
+.block {
+    box-shadow: 1px 6px 6px #d4d4d4;
+
+}
+
+.chiffre {
+    color: $color;
+    text-align: center;
+    font-weight: bold;
+}
+
+.texte {
+    text-align: center;
+    display: flex;
+}

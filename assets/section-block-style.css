@@ -1,4 +1,1 @@
-.custom-text-section h2 {
-    align-items: center;
-    color: rgb(var(--color-foreground));
-}
+.custom-text-section h1{text-align:center;font-family:"Pushster",cursive}.block{box-shadow:1px 6px 6px #d4d4d4}.chiffre{color:#a9d1a4;text-align:center;font-weight:bold}.texte{text-align:center;display:flex}
