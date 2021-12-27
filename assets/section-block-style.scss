@@ -32,6 +32,22 @@ $taille3: 30px;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
+$font-family : 'Pushster', cursive;
+
+.custom-text-section h1 {
+    text-align: center;
+    font-family: $font-family;
+}
+
+.block {
+    box-shadow: 1px 6px 6px #d4d4d4;
+
+}
+
+.chiffre {
+    color: $color;
+    text-align: center;
+    font-weight: bold;
 }
 
 .texte {
@@ -43,4 +59,5 @@ $taille3: 30px;
 
 .field {
     background-color: red !important;
+    display: flex;
 }

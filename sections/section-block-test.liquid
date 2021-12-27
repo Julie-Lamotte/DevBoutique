@@ -1,19 +1,21 @@
+
+
 <div class="custom-text-section">
-    <h2> {{ section.settings.custom_text_title }} </h2>
+    <h1> {{ section.settings.custom_text_title }} </h1>
 </div>
-  
-{% for block in section.blocks %}
-  {% if block.settings.img != nil %}
-    <h2> {{ block.settings.custom_text_title }} </h2>
-    <div>{{ block.settings.custom_text_body }}</div>
-    <a href="{{ block.settings.link }}" class="bouton">{{ block.settings.linktext }}</a>
-    <img src="{{ block.settings.img | img_url: '600x' }}" loading="lazy">    
-  {% endif %}
-{% endfor %}
-  
+
+<div class="block">
+    {% for block in section.blocks %}
+    {% if block.settings.custom_text_title != nil %}
+        <h1 class="chiffre">{{ block.settings.custom_text_title }}</h1>
+        <div class="texte">{{ block.settings.custom_text_body }}</div>    
+    {% endif %}
+    {% endfor %}
+</div>
+
   {% schema %}
     {
-        "name": "my titre et image",
+        "name": "Def",
         "settings": [
             {
                 "id": "custom_text_title",
@@ -25,7 +27,7 @@
         "blocks": [ 
             {
                 "name": "text img",
-                "type": "image",
+                "type": "text",
                 "settings": [
                     {
                         "id": "custom_text_title",
@@ -38,7 +40,10 @@
                         "type": "richtext",
                         "label": "Texte",
                         "default": "<p>Entrer le texte</p>"
+
                     },
+
+                    
                     {
                         "type": "image_picker",
                         "id": "img",
@@ -54,14 +59,24 @@
                         "type": "text",
                         "label": "Bouton text",
                         "default": "Cliquez-ici"
-                    }  
+
+                    },                  
+
+                      
+                    {
+                        "type": "color",
+                        "id": "body_text",
+                        "label": "Body text",
+                        "default": "#000000"
+                    }             
+
                  ]
             }
   
         ],
         "presets": [
             {
-                "name": "my titre et image",
+                "name": "Def",
                 "category": "Custom"
             }
         ]
