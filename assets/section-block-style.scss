@@ -1,0 +1,46 @@
+$color: #a9d1a4;
+$taille1: 80px;
+$taille2 : 40px; 
+$taille3: 30px;
+
+.custom-text-section h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 110px;
+    color: #030303;
+    font-size: $taille2;
+}
+
+.test {
+    box-shadow: 1px 6px 6px black;
+    margin-right: 66px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 180px;
+}
+
+.block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.chiffre {
+    color: #a9d1a4;
+    text-align: center;
+    font-size: $taille1;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.texte {
+    text-align: center;
+    font-size: $taille3;
+    font-weight: bold;
+    color: #030303;
+}
+
+.field {
+    background-color: red !important;
+}

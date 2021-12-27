@@ -122,6 +122,8 @@
     {%- endif -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+
+    {{ 'section-block-style.scss.css' | asset_url | stylesheet_tag }} 
   </head>
 
   <body class="gradient">
